@@ -1,0 +1,36 @@
+﻿ 	@using TXTextControl.Web.MVC.DocumentViewer
+	@using System.Text
+	        
+	<div style="width: 1200px; height: 800px;">
+	    
+	@Html.TXTextControl().DocumentViewer(settings => {
+			settings.DocumentData = ViewBag.Document;
+			settings.Dock = DocumentViewerSettings.DockStyle.Fill;
+			settings.SignatureSettings = new SignatureSettings() {
+				OwnerName = "GlobalPay",
+				ShowSignatureBar = true,
+				SignerName = "John Doe",
+				SignatureBoxes = new SignatureBox[] {
+					new SignatureBox("txsign") { SigningRequired = true, Style = SignatureBox.SignatureBoxStyle.Signature }
+				},
+				RedirectUrlAfterSignature = this.Url.Action("CreatePdf", "Home", null, Context.Request.Scheme, null),
+			};
+	}).Render()
+	    
+	</div>
+	
+	<script>
+
+	window.addEventListener("documentViewerLoaded", function () {
+		TXDocumentViewer.signatures.setSubmitCallback(signatureComplete);
+	});
+
+	function signatureComplete(e) {
+		var element = document.createElement('a');
+		element.setAttribute('href', 'data:application/pdf;;base64,' + e);
+		element.setAttribute('download', "results.pdf");
+		document.body.appendChild(element);
+		element.click();
+	}
+	
+	</script>

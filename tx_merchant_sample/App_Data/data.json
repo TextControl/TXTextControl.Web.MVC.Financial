@@ -1,0 +1,45 @@
+[
+  {
+    "business": {
+      "dba": {
+        "name": "My Business",
+        "street": "123 Main St",
+        "city": "Anytown",
+        "state": "North Carolina",
+        "zip": "12345",
+        "phone": "555-555-5555",
+        "contact": "John Doe",
+        "email": "",
+        "website": ""
+      },
+      "legal": {
+        "name": "My Business",
+        "street": "123 Main St",
+        "city": "Anytown",
+        "state": "North Carolina",
+        "zip": "12345",
+        "phone": "555-555-5555",
+        "contact": "John Doe",
+        "email": "",
+        "website": ""
+      }
+    },
+    "merchant": {
+      "ticker": "123456",
+      "ownership": "Corporation",
+      "goods": "Retail",
+      "sic": "1234",
+      "years": "5",
+      "taxid": "123-45-6789",
+      "type_retail": true,
+      "signer": "John Doe",
+      "sales": {
+        "swiped": "80",
+        "keyed": "10",
+        "internet": "5",
+        "order": "5"
+      },
+      "acceptno": true
+    }
+  }
+]
