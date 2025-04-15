@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="TXTextControl.TextControl.ASP.SDK" Version="32.0.3" />
-    <PackageReference Include="TXTextControl.Web.DocumentViewer" Version="32.3.0" />
+    <PackageReference Include="TXTextControl.TextControl.Core.SDK" Version="33.0.0" />
+    <PackageReference Include="TXTextControl.Web.DocumentViewer" Version="33.0.0" />
   </ItemGroup>
 
 </Project>
